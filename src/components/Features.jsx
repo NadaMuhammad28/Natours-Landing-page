@@ -16,7 +16,11 @@ const Features = () => {
             const { id, title, Icon, p } = card;
             return (
               <Grid2 item xs={12} sm={6} md={4} alignSelf="center" key={id}>
-                <article className="card d-flex-center-col ">
+                <article
+                  className="card d-flex-center-col "
+                  data-aos="fade-up"
+                  data-aos-delay={`${card.id * 100}`}
+                >
                   <Icon />
                   <h3>{title}</h3>
                   <p>{p}</p>
@@ -34,6 +38,7 @@ const Wrapper = styled("section")`
   background-image: var(--linear-grad), url(/features.jpg);
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
   min-height: 70vh;
+  overflow: hidden;
 
   .card {
     // min-heigth: 25rem;

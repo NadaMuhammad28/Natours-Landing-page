@@ -5,7 +5,6 @@ const Context = ({ children }) => {
   const [isToggled, setToggleSideBar] = useState(false);
   const toggleNav = () => {
     const rootElement = document.getElementsByTagName("html")[0];
-    console.log(rootElement);
     if (isToggled) {
       rootElement.classList.remove("menu-open");
       setToggleSideBar(false);

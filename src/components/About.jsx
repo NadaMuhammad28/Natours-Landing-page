@@ -4,8 +4,11 @@ import { styled } from "@mui/system";
 const About = () => {
   return (
     <Wrapper className="section" id="about">
-      <div className="container d-flex-center-col" style={{ gap: "2rem" }}>
-        <h2 className="head-title p-title">
+      <div
+        className="container d-flex-center-col"
+        style={{ gap: "2rem", overflow: "hidden" }}
+      >
+        <h2 className="head-title p-title" data-aos="fade-up">
           Exciting Tours For Adventurous Peopel
         </h2>
         <div>
@@ -15,7 +18,7 @@ const About = () => {
             spacing={2}
           >
             <Grid2 item xs={12} md={6} lg={8}>
-              <article className="d-flex-center-col">
+              <article className="d-flex-center-col" data-aos="fade-right">
                 <div className="content">
                   <h3>You're Going To Fall In Love With Nature</h3>
                   <p>
@@ -44,6 +47,7 @@ const About = () => {
             {/* IMG */}
             <Grid2 item xs={12} md={6} lg={4} alignSelf="center">
               <div
+                data-aos="fade-left"
                 style={{ width: "100%", display: "flex", alignItems: "center" }}
               >
                 <img src={img} alt="about adventures" />

@@ -4,7 +4,7 @@ const From = () => {
   return (
     <Wrapper className="section" id="book">
       <div className="container d-flex-center-col">
-        <form className="form">
+        <form className="form" data-aos="fade-up">
           <h2 className="head-title">Start booking now</h2>
           <div className="form-inputs">
             {/*  */}
@@ -51,6 +51,7 @@ const From = () => {
 };
 
 const Wrapper = styled("section")`
+  overflow: hidden;
   background: var(--linear-grad);
 
   div .form {
@@ -77,23 +78,24 @@ const Wrapper = styled("section")`
     height: 100%;
     width: 49%;
     justify-content: 1rem;
+    gap: 0.7rem;
   }
 
   .personal-info {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     height: 40%;
   }
   .group-btn {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1rem 0;
     color: var(--bg-primary);
     font-weight: 900;
     text-transform: capitalize;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .submit {
     background: var(--bg-primary);

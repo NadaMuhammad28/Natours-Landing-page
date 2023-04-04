@@ -6,7 +6,9 @@ const Reviews = () => {
   return (
     <Wrapper className="section section-center " id="feedback">
       <div className="container">
-        <h2 className="p-title head-title">We Make People Happy</h2>
+        <h2 className="p-title head-title" data-aos="fade-up">
+          We Make People Happy
+        </h2>
         <Grid2
           spacing={0}
           container
@@ -17,7 +19,11 @@ const Reviews = () => {
             const { id, name, img, p, title } = card;
             return (
               <Grid2 item xs={12} lg={6} alignSelf="center" key={id}>
-                <article className="card">
+                <article
+                  className="card"
+                  data-aos={id == 1 ? "fade-right" : "fade-left"}
+                  data-aos-delay={`${id * 2}`}
+                >
                   <figure>
                     <img src={img} alt="name" />
                     <figcaption>
@@ -39,6 +45,7 @@ const Reviews = () => {
   );
 };
 const Wrapper = styled("section")`
+  overflow: hidden;
   text-align: center;
   background: #fff;
   .card {

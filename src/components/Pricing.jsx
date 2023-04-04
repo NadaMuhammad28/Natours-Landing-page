@@ -7,7 +7,9 @@ const Pricing = () => {
   return (
     <Wrapper className="section" id="tours">
       <div className="container">
-        <h2 className="head-title p-title">most popular tours</h2>
+        <h2 className="head-title p-title" data-aos="fade-up">
+          most popular tours
+        </h2>
         <Grid2 container justifyContent="center" spacing={4}>
           {prices.map((card) => {
             return (
@@ -19,7 +21,11 @@ const Pricing = () => {
                 key={card.id}
                 alignSelf="center"
               >
-                <article className="flip-card">
+                <article
+                  className="flip-card"
+                  data-aos="fade-up"
+                  data-aos-delay={`${card.id * 100}`}
+                >
                   <div className="flip-card-inner">
                     {/*  */}
                     <div className="flip-card-front">
@@ -76,6 +82,7 @@ const Pricing = () => {
 };
 
 const Wrapper = styled("section")`
+  overflow: hidden;
   background: var(--bg-primary-1);
   text-align: center;
   // front

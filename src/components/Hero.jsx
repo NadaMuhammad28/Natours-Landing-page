@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <Wrapper className="d-flex-center-col">
       {/* <Nav /> */}
-      <div className="container d-flex-center-col">
-        <h1>outdoors</h1>
-        <h5>is where life happens</h5>
+      <div className="container d-flex-center-col content">
+        <h1 data-aos="fade-right">outdoors</h1>
+        <h5 data-aos="fade-left">is where life happens</h5>
         <button className="btn">dicover our tours</button>
       </div>
     </Wrapper>
@@ -18,6 +18,7 @@ export default Hero;
 
 const Wrapper = styled("header")`
   position: relative;
+  overflow: hidden;
   background-image: var(--linear-grad), url(/hero-intro.jpg);
   background-position: center;
   background-size: cover;
@@ -34,7 +35,9 @@ const Wrapper = styled("header")`
   h5 {
     letter-spacing: 1.02rem;
   }
-
+  .content {
+    overflow: hidden;
+  }
   button {
     background-color: var(--bg-primary);
   }
