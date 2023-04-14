@@ -103,7 +103,7 @@ const Wrapper = styled("section")`
     right: 0;
     -webkit-box-decoration-break: clone;
     top: -5rem;
-    z-index: 2;
+//     z-index: 2;
     width: 45%;
     padding-right: 1.5rem;
   }
